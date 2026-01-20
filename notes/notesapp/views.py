@@ -12,7 +12,10 @@ def note_list(request):
     notes = Note.objects.all()
     return render(request, "note_list.html", {"notes": notes})
 
-#{"notes": notes} did not understand this part
+#{"notes": notes} means when we connect the python variables to html file
+#left side "notes" mens used in html and right side notes means in python
+# if i remove this the loop in html file will not work
+
 
 def add_note(request):
     notes = Note.objects.all()
